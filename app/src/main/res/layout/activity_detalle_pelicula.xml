@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/gris_oscuro"
     tools:context=".DetallePelicula">
 
     <LinearLayout
@@ -16,26 +17,34 @@
         <ImageView
             android:id="@+id/iv_pelicula_header"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="fitXY"
             android:layout_gravity="center"
-            android:src="@drawable/bonesheader"/>
+            android:src="@drawable/headerbighero6"/>
 
         <TextView
             android:id="@+id/tv_nombre_pelicula"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="BONES"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:gravity="center"/>
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text="AHHHHHH"
+            android:textSize="25sp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="@color/amarillo"
+            android:textAlignment="textStart"
+            android:gravity="start"/>
 
         <TextView
             android:id="@+id/tv_pelicula_desc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit, nam volutpat etiam et viverra neque dictumst inceptos, venenatis malesuada tellus luctus cras phasellus."
             android:textSize="20sp"
-            android:textAlignment="center"/>
+            android:textAlignment="textStart"
+            android:textColor="@color/gris_claro"/>
 
     </LinearLayout>
 

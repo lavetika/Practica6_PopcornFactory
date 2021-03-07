@@ -14,14 +14,9 @@ class DetallePelicula : AppCompatActivity() {
         val bundle = intent.extras
 
         if (bundle != null){
-
             iv_pelicula_header.setImageResource(bundle.getInt("header"))
-            tv_nombre_pelicula.setText(bundle.getString("nombre"))
+            tv_nombre_pelicula.setText(bundle.getString("titulo"))
             tv_pelicula_desc.setText(bundle.getString("sinopsis"))
-
-            //var image: ImageView = findViewById(R.id.iv_pelicula_imagen) as ImageView
-            //var title: TextView = findViewById(R.id.tv_nombre_pelicula) as TextView
-            //var sinopsis: TextView = findViewById(R.id.tv_pelicula_desc) as TextView
         }
     }
 }

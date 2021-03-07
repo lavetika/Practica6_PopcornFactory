@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.activity_catalogo_peliculas.*
+import kotlinx.android.synthetic.main.activity_detalle_pelicula.view.*
 import kotlinx.android.synthetic.main.pelicula.view.*
 
 class CatalogoPeliculas : AppCompatActivity() {
