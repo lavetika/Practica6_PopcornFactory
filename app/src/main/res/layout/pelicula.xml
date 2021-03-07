@@ -12,8 +12,9 @@
 
         <ImageView
             android:id="@+id/iv_pelicula"
-            android:layout_width="113dp"
-            android:layout_height="85dp"
+            android:layout_width="85dp"
+            android:layout_height="113dp"
+            android:layout_marginTop="20dp"
             android:layout_gravity="center"
             android:src="@drawable/bones"/>
 
@@ -21,9 +22,12 @@
             android:id="@+id/tv_pelicula_titulo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
             android:text="BONES"
             android:textAlignment="center"
-            android:textSize="15sp"
+            android:textSize="18sp"
+            android:textColor="@color/amarillo"
+            android:fontFamily="sans-serif-condensed-medium"
             android:gravity="center"/>
 
     </LinearLayout>

@@ -9,11 +9,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.activity_catalogo_peliculas.*
-import kotlinx.android.synthetic.main.activity_detalle_pelicula.view.*
 import kotlinx.android.synthetic.main.pelicula.view.*
 
 class CatalogoPeliculas : AppCompatActivity() {
-    var adapter: PeliculaAdapter? = null
+    var adapterPeliculas: PeliculaAdapter? = null
     var peliculas = ArrayList<Pelicula>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,8 +21,8 @@ class CatalogoPeliculas : AppCompatActivity() {
 
         cargarPeliculas()
 
-        adapter = PeliculaAdapter(this, peliculas)
-        gridview.adapter = adapter
+        adapterPeliculas = PeliculaAdapter(this, peliculas)
+        gridviewPeliculas.adapter = adapterPeliculas
     }
 
     fun cargarPeliculas(){
@@ -39,6 +38,10 @@ class CatalogoPeliculas : AppCompatActivity() {
         peliculas.add(Pelicula(getString(R.string.title1917), R.drawable.diecinuevediecisiete, R.drawable.diecinuevediecisieteheader, getString(R.string.desc1917)))
         peliculas.add(Pelicula(getString(R.string.titleMenInBlack), R.drawable.mib, R.drawable.mibheader, getString(R.string.descMenInBlack)))
         peliculas.add(Pelicula(getString(R.string.titleSuits), R.drawable.suits, R.drawable.suitsheader, getString(R.string.descSuits)))
+    }
+
+    fun cargarSeries(){
+
     }
 
 }
