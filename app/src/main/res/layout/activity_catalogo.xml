@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/gris_oscuro"
-    tools:context=".CatalogoPeliculas">
+    tools:context=".Catalogo">
 
     <TextView
         android:layout_width="match_parent"
@@ -20,16 +20,38 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="300dp"
         android:fillViewport="true">
     <GridView
         android:id="@+id/gridviewPeliculas"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="300dp"
         android:numColumns="3">
-
     </GridView>
+    </ScrollView>
 
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:text="SERIES"
+        android:textSize="20dp"
+        android:textAlignment="textEnd"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textColor="@color/amarillo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:fillViewport="true">
+        <GridView
+            android:id="@+id/gridviewSeries"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:numColumns="3">
+        </GridView>
     </ScrollView>
 
 
