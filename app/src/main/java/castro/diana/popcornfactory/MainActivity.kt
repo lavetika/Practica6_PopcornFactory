@@ -12,8 +12,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //val button: Button = findViewById(R.id.btn_start) as Button
-
         btn_start.setOnClickListener {
             var intent: Intent = Intent(this, Catalogo::class.java)
             startActivity(intent)

@@ -26,7 +26,6 @@
     </GridView>
 
 
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -38,15 +37,11 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/amarillo" />
 
-
         <GridView
             android:id="@+id/gridviewSeries"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:numColumns="3">
         </GridView>
-
-
-
 
 </LinearLayout>

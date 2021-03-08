@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import kotlinx.android.synthetic.main.vista.view.*
 
-
 class PeliculaAdapter: BaseAdapter {
     var peliculas = ArrayList<Pelicula>()
     var context: Context? = null
