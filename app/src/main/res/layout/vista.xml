@@ -27,7 +27,7 @@
             android:textAlignment="center"
             android:textSize="18sp"
             android:textColor="@color/amarillo"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:fontFamily="sans-serif-light"
             android:gravity="center"/>
 
     </LinearLayout>

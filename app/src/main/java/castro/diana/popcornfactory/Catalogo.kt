@@ -14,6 +14,7 @@ import kotlinx.android.synthetic.main.vista.view.*
 class Catalogo : AppCompatActivity() {
     var adapterPeliculas: PeliculaAdapter? = null
     var adapterSeries: SerieAdapter? = null
+
     var peliculas = ArrayList<Pelicula>()
     var series = ArrayList<Serie>()
 
@@ -26,6 +27,7 @@ class Catalogo : AppCompatActivity() {
 
         adapterPeliculas = PeliculaAdapter(this, peliculas)
         adapterSeries = SerieAdapter(this, series)
+
         gridviewPeliculas.adapter = adapterPeliculas
         gridviewSeries.adapter = adapterSeries
     }

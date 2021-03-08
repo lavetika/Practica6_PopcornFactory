@@ -18,17 +18,13 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/amarillo" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:fillViewport="true">
     <GridView
         android:id="@+id/gridviewPeliculas"
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:numColumns="3">
     </GridView>
-    </ScrollView>
+
 
 
     <TextView
@@ -42,17 +38,14 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:textColor="@color/amarillo" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:fillViewport="true">
+
         <GridView
             android:id="@+id/gridviewSeries"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:numColumns="3">
         </GridView>
-    </ScrollView>
+
 
 
 
