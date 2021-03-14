@@ -28,12 +28,12 @@ class Catalogo : AppCompatActivity() {
 
     fun cargarPeliculas(){
 
-        peliculas.add(Pelicula(getString(R.string.titleBigHero6), R.drawable.bighero6, R.drawable.headerbighero6, getString(R.string.descBigHero6)))
-        peliculas.add(Pelicula(getString(R.string.titleInception), R.drawable.inception, R.drawable.inceptionheader, getString(R.string.descInception)))
-        peliculas.add(Pelicula(getString(R.string.titleLeapYear), R.drawable.leapyear, R.drawable.leapyearheader, getString(R.string.descLeapYear)))
-        peliculas.add(Pelicula(getString(R.string.titleToyStory), R.drawable.toystory, R.drawable.toystoryheader, getString(R.string.descToyStory)))
-        peliculas.add(Pelicula(getString(R.string.title1917), R.drawable.diecinuevediecisiete, R.drawable.diecinuevediecisieteheader, getString(R.string.desc1917)))
-        peliculas.add(Pelicula(getString(R.string.titleMenInBlack), R.drawable.mib, R.drawable.mibheader, getString(R.string.descMenInBlack)))
+        peliculas.add(Pelicula(getString(R.string.titleBigHero6), R.drawable.bighero6, R.drawable.headerbighero6, getString(R.string.descBigHero6), arrayListOf<Cliente>()))
+        peliculas.add(Pelicula(getString(R.string.titleInception), R.drawable.inception, R.drawable.inceptionheader, getString(R.string.descInception), arrayListOf<Cliente>()))
+        peliculas.add(Pelicula(getString(R.string.titleLeapYear), R.drawable.leapyear, R.drawable.leapyearheader, getString(R.string.descLeapYear), arrayListOf<Cliente>()))
+        peliculas.add(Pelicula(getString(R.string.titleToyStory), R.drawable.toystory, R.drawable.toystoryheader, getString(R.string.descToyStory), arrayListOf<Cliente>()))
+        peliculas.add(Pelicula(getString(R.string.title1917), R.drawable.diecinuevediecisiete, R.drawable.diecinuevediecisieteheader, getString(R.string.desc1917), arrayListOf<Cliente>()))
+        peliculas.add(Pelicula(getString(R.string.titleMenInBlack), R.drawable.mib, R.drawable.mibheader, getString(R.string.descMenInBlack), arrayListOf<Cliente>()))
     }
 
     fun cargarSeries(){
