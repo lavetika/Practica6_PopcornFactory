@@ -34,6 +34,7 @@ class Detalle : AppCompatActivity() {
 
                 intent.putExtra("id", id)
                 intent.putExtra("name", title)
+                intent.putExtra("ns", ns)
 
                this.startActivity(intent)
 

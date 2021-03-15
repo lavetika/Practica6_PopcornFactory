@@ -12,18 +12,34 @@ class SeatSelection : AppCompatActivity() {
 
         val bundle = intent.extras
         var positionMov = -1
+        var ns = 0
+        var id = 0
 
         if(bundle!=null) {
             tv_titleSeats.setText(bundle.getString("name"))
             positionMov = bundle.getInt("id")
+            ns = bundle.getInt("ns")
         }
 
         btn_confirm.setOnClickListener {
             //TODO añadir lógica para reservar el lugar seleccionado por el usuario
+
+
+
+            when(id){
+                row1.checkedRadioButtonId ->{}
+                row2.checkedRadioButtonId ->{}
+                row3.checkedRadioButtonId ->{}
+                row4.checkedRadioButtonId ->{}
+            }
+
+
+
             //TODO hacer una nueva actividad donde se vea el resumen de la compra (que tome el nombre del cliente y se vea que se seleccionó)
 
             Toast.makeText(this, "Enjoy the movie!", Toast.LENGTH_LONG).show()
         }
+
 
         row1.setOnCheckedChangeListener { group, checkedId ->
             if(checkedId > -1){
