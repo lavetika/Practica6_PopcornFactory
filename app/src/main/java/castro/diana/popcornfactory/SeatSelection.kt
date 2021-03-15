@@ -25,7 +25,39 @@ class SeatSelection : AppCompatActivity() {
         btn_confirm.setOnClickListener {
             //TODO añadir lógica para reservar el lugar seleccionado por el usuario
 
-
+            if(row1.checkedRadioButtonId != -1){
+                id = row1.checkedRadioButtonId
+                var radio: RadioButton = findViewById(id)
+                if (radio.isChecked){
+                    radio.setBackgroundResource(R.drawable.radio_disabled)
+                    Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
+                    ns -1
+                }
+            }else if (row2.checkedRadioButtonId != -1){
+                id = row2.checkedRadioButtonId
+                var radio: RadioButton = findViewById(id)
+                if (radio.isChecked){
+                    radio.setBackgroundResource(R.drawable.radio_disabled)
+                    Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
+                    ns -1
+                }
+            }else if(row3.checkedRadioButtonId != -1){
+                id = row3.checkedRadioButtonId
+                var radio: RadioButton = findViewById(id)
+                if (radio.isChecked){
+                    radio.setBackgroundResource(R.drawable.radio_disabled)
+                    Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
+                    ns -1
+                }
+            }else if(row4.checkedRadioButtonId != -1){
+                id = row4.checkedRadioButtonId
+                var radio: RadioButton = findViewById(id)
+                if (radio.isChecked){
+                    radio.setBackgroundResource(R.drawable.radio_disabled)
+                    Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
+                    ns -1
+                }
+            }
 
             when(id){
                 row1.checkedRadioButtonId ->{}
@@ -33,22 +65,6 @@ class SeatSelection : AppCompatActivity() {
                 row3.checkedRadioButtonId ->{}
                 row4.checkedRadioButtonId ->{}
             }
-
-            if(row1.checkedRadioButtonId != -1){
-                id = row1.checkedRadioButtonId
-                var radio: RadioButton = findViewById(id)
-                radio.setOnCheckedChangeListener { buttonView, isChecked ->
-                    if (isChecked == true){
-                        radio.setBackgroundResource(R.drawable.radio_disabled)
-                    }
-                    Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
-                }
-
-            }else if (row2.checkedRadioButtonId != -1){
-
-            }
-
-
 
 
             //TODO hacer una nueva actividad donde se vea el resumen de la compra (que tome el nombre del cliente y se vea que se seleccionó)

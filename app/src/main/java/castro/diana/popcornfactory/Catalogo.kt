@@ -37,12 +37,12 @@ class Catalogo : AppCompatActivity() {
     }
 
     fun cargarSeries(){
-        series.add(Serie(getString(R.string.titleBones), R.drawable.bones, R.drawable.bonesheader, getString(R.string.descBones)))
-        series.add(Serie(getString(R.string.titleDrHouse), R.drawable.drhouse, R.drawable.househeader, getString(R.string.descDrHouse)))
-        series.add(Serie(getString(R.string.titleDrWho), R.drawable.drwho, R.drawable.drwhoheader, getString(R.string.descDrWho)))
-        series.add(Serie(getString(R.string.titleFriends), R.drawable.friends, R.drawable.friendsheader, getString(R.string.descFriends)))
-        series.add(Serie(getString(R.string.titleSmallville), R.drawable.smallville, R.drawable.smallvilleheader, getString(R.string.descSmallville)))
-        series.add(Serie(getString(R.string.titleSuits), R.drawable.suits, R.drawable.suitsheader, getString(R.string.descSuits)))
+        series.add(Serie(getString(R.string.titleBones), R.drawable.bones, R.drawable.bonesheader, getString(R.string.descBones), arrayListOf<Cliente>()))
+        series.add(Serie(getString(R.string.titleDrHouse), R.drawable.drhouse, R.drawable.househeader, getString(R.string.descDrHouse), arrayListOf<Cliente>()))
+        series.add(Serie(getString(R.string.titleDrWho), R.drawable.drwho, R.drawable.drwhoheader, getString(R.string.descDrWho), arrayListOf<Cliente>()))
+        series.add(Serie(getString(R.string.titleFriends), R.drawable.friends, R.drawable.friendsheader, getString(R.string.descFriends), arrayListOf<Cliente>()))
+        series.add(Serie(getString(R.string.titleSmallville), R.drawable.smallville, R.drawable.smallvilleheader, getString(R.string.descSmallville), arrayListOf<Cliente>()))
+        series.add(Serie(getString(R.string.titleSuits), R.drawable.suits, R.drawable.suitsheader, getString(R.string.descSuits), arrayListOf<Cliente>()))
     }
 
 }

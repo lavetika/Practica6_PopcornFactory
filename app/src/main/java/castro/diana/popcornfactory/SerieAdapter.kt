@@ -31,6 +31,8 @@ class SerieAdapter: BaseAdapter {
             intent.putExtra("image", serie.image)
             intent.putExtra("header", serie.header)
             intent.putExtra("sinopsis", serie.sinopsis)
+            intent.putExtra("numberSeats", (20-serie.seats.size))
+            intent.putExtra("position", position)
             context!!.startActivity(intent)
         }
         return view
