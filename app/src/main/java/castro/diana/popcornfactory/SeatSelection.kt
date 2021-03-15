@@ -2,6 +2,7 @@ package castro.diana.popcornfactory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.RadioButton
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_seat_selection.*
 
@@ -13,7 +14,7 @@ class SeatSelection : AppCompatActivity() {
         val bundle = intent.extras
         var positionMov = -1
         var ns = 0
-        var id = 0
+        var id: Int = 0
 
         if(bundle!=null) {
             tv_titleSeats.setText(bundle.getString("name"))
@@ -32,6 +33,21 @@ class SeatSelection : AppCompatActivity() {
                 row3.checkedRadioButtonId ->{}
                 row4.checkedRadioButtonId ->{}
             }
+
+            if(row1.checkedRadioButtonId != -1){
+                id = row1.checkedRadioButtonId
+                var radio: RadioButton = findViewById(id)
+                radio.setOnCheckedChangeListener { buttonView, isChecked ->
+                    if (isChecked == true){
+                        radio.setBackgroundResource(R.drawable.radio_disabled)
+                    }
+                    Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
+                }
+
+            }else if (row2.checkedRadioButtonId != -1){
+
+            }
+
 
 
 
