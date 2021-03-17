@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/gris_oscuro"
+    tools:context=".Compra">
+
+    <TextView
+        android:id="@+id/tv_tituloPelicula"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text=""
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="@color/amarillo"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:id="@+id/tv_numberSeat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text=""
+        android:textSize="25sp"
+        android:textColor="@color/gris_claro"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180dp"
+        android:text="@string/enjoyMovieText"
+        android:textSize="20sp"
+        android:textColor="@color/gris"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textAlignment="center"/>
+
+</LinearLayout>

@@ -1,8 +1,8 @@
 package castro.diana.popcornfactory
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.MediaStore
 import android.widget.RadioButton
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_seat_selection.*
@@ -13,19 +13,28 @@ class SeatSelection : AppCompatActivity() {
         setContentView(R.layout.activity_seat_selection)
 
         val bundle = intent.extras
-        var positionMov = -1
-        var ns = 0
+        var positionMovie = -1
+        var seats = 0
         var id: Int = 0
         var radio: RadioButton
+        var name = ""
 
         if(bundle!=null) {
-            tv_titleSeats.setText(bundle.getString("name"))
-            positionMov = bundle.getInt("id")
-            ns = bundle.getInt("ns")
+            name = bundle.getString("name").toString()
+            tv_titleSeats.setText(name)
+            positionMovie = bundle.getInt("id")
+            seats = bundle.getInt("seats")
         }
 
         btn_confirm.setOnClickListener {
             //TODO añadir lógica para reservar el lugar seleccionado por el usuario
+
+            val intent: Intent = Intent(this, Compra::class.java)
+
+
+            intent.putExtra("name", name)
+
+
 
             if(row1.checkedRadioButtonId != -1){
                 id = row1.checkedRadioButtonId
@@ -33,9 +42,10 @@ class SeatSelection : AppCompatActivity() {
                 if (radio.isChecked){
                     radio.setBackgroundResource(R.drawable.radio_disabled)
                     Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
+                    intent.putExtra("seat", radio.text)
                     radio.isChecked = false
                     radio.isEnabled = false
-                    ns -1
+                    seats -1
                 }
             }else if (row2.checkedRadioButtonId != -1){
                 id = row2.checkedRadioButtonId
@@ -43,9 +53,10 @@ class SeatSelection : AppCompatActivity() {
                 if (radio.isChecked){
                     radio.setBackgroundResource(R.drawable.radio_disabled)
                     Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
+                    intent.putExtra("seat", radio.text)
                     radio.isChecked = false
                     radio.isEnabled = false
-                    ns -1
+                    seats -1
                 }
             }else if(row3.checkedRadioButtonId != -1){
                 id = row3.checkedRadioButtonId
@@ -53,9 +64,10 @@ class SeatSelection : AppCompatActivity() {
                 if (radio.isChecked){
                     radio.setBackgroundResource(R.drawable.radio_disabled)
                     Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
+                    intent.putExtra("seat", radio.text)
                     radio.isChecked = false
                     radio.isEnabled = false
-                    ns -1
+                    seats -1
                 }
             }else if(row4.checkedRadioButtonId != -1){
                 id = row4.checkedRadioButtonId
@@ -63,23 +75,19 @@ class SeatSelection : AppCompatActivity() {
                 if (radio.isChecked){
                     radio.setBackgroundResource(R.drawable.radio_disabled)
                     Toast.makeText(this, radio.text, Toast.LENGTH_SHORT).show()
+                    intent.putExtra("seat", radio.text)
                     radio.isChecked = false
                     radio.isEnabled = false
-                    ns -1
+                    seats -1
                 }
-            }
-
-            when(id){
-                row1.checkedRadioButtonId ->{}
-                row2.checkedRadioButtonId ->{}
-                row3.checkedRadioButtonId ->{}
-                row4.checkedRadioButtonId ->{}
             }
 
 
             //TODO hacer una nueva actividad donde se vea el resumen de la compra (que tome el nombre del cliente y se vea que se seleccionó)
 
             Toast.makeText(this, "Enjoy the movie!", Toast.LENGTH_LONG).show()
+
+            this.startActivity(intent)
         }
 
 
